@@ -192,16 +192,16 @@
     .hero {
       flex: 1;
       display: flex;
-      align-items: flex-start; /* statt center */
+      align-items: flex-start;
       justify-content: center;
-      padding-top: 15vh; /* weiter nach unten */
+      padding-top: 14vh; /* weiter nach unten */
       padding-bottom: 2rem;
     }
 
     .hero-inner {
-      max-width: 580px; /* kleiner als vorher */
+      max-width: 520px; /* kleiner */
       text-align: center;
-      padding: clamp(1.2rem, 3vw, 2rem); /* weniger Padding */
+      padding: clamp(1.1rem, 3vw, 2rem); /* weniger Innenabstand */
       border-radius: 24px;
       background:
         radial-gradient(circle at 0% 0%, rgba(224, 166, 75, 0.2), transparent 60%),
@@ -216,28 +216,28 @@
       letter-spacing: 0.18em;
       font-size: 0.75rem;
       color: var(--accent-soft);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero-title {
       font-family: "Cinzel", serif;
-      font-size: clamp(2.1rem, 4vw, 3rem);
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero-subtitle {
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-copy {
-      font-size: 0.98rem;
-      line-height: 1.7;
+      font-size: 0.92rem;
+      line-height: 1.6;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      margin-bottom: 1.6rem;
     }
 
     .hero-copy strong {
@@ -255,8 +255,8 @@
     .btn-primary,
     .btn-ghost {
       border-radius: 999px;
-      padding: 0.75rem 1.5rem;
-      font-size: 0.9rem;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.85rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       border: 1px solid transparent;
@@ -354,121 +354,4 @@
       top: -5px;
     }
 
-    .nav-toggle span::after {
-      top: 5px;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        overflow-y: auto;
-      }
-
-      header {
-        align-items: center;
-      }
-
-      nav {
-        position: absolute;
-        right: 1.5rem;
-        top: 64px;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 0.75rem 1rem;
-        border-radius: 12px;
-        background: rgba(5, 8, 20, 0.96);
-        border: 1px solid rgba(60, 74, 99, 0.8);
-        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9);
-        display: none;
-      }
-
-      nav.nav-open {
-        display: flex;
-      }
-
-      .nav-toggle {
-        display: flex;
-      }
-
-      .hero {
-        padding-top: 20vh;
-        padding-bottom: 2.5rem;
-      }
-
-      .hero-inner {
-        max-width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Background Video -->
-  <div class="video-bg">
-    <!-- Ersetze src durch deine Videodatei -->
-    <video src="assets/video/strand-loop.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-overlay"></div>
-
-  <div class="page">
-    <header>
-      <div class="brand">
-        <div class="brand-mark">OR</div>
-        <div class="brand-text">
-          <div class="brand-title">Ovils Reise</div>
-          <div class="brand-subtitle">Fantasy-Saga von Dirk van den Boom</div>
-        </div>
-      </div>
-
-      <button class="nav-toggle" aria-label="Menü öffnen">
-        <span></span>
-      </button>
-
-      <nav>
-        <a href="#start">Start</a>
-        <a href="#buecher">Die Bücher</a>
-        <a href="#welt">Welt &amp; Figuren</a>
-        <a href="#dirk">Über Dirk</a>
-        <a href="#kontakt">Kontakt</a>
-        <a class="nav-cta" href="#lesen">Jetzt lesen</a>
-      </nav>
-    </header>
-
-    <main class="hero" id="start">
-      <section class="hero-inner">
-        <div class="hero-kicker">Fantasy &middot; Sechsbändige Saga &middot; Kindle Unlimited</div>
-        <h1 class="hero-title">Ovils Reise</h1>
-        <p class="hero-subtitle">Ein Mann ohne Erinnerungen. Ein alter Dämon in seinem Kopf. Sechs Stadtstaaten am Rand des Krieges.</p>
-        <p class="hero-copy">
-          An einer einsamen Küste erwacht ein Schiffbrüchiger – ohne Vergangenheit, ohne Namen. Nur eine spöttische Stimme in seinem Inneren
-          weiß mehr, als ihm lieb ist. <strong>Ovil</strong> und der Dämon <strong>Xaxx</strong> stolpern durch eine Welt voller Diebe, Höfe
-          und Magier – und mit jedem Schritt wird klarer, dass ihre gemeinsame Reise weit größer ist als ein verlorenes Leben.
-        </p>
-        <div class="hero-actions" id="lesen">
-          <a href="#" class="btn-primary">Band&nbsp;1: Eardum entdecken</a>
-          <a href="#buecher" class="btn-ghost">Mehr über die sechs Bände</a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div>&copy; <span id="year"></span> Dirk van den Boom · Ovils Reise</div>
-      <div class="footer-links">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Dynamisches Jahr im Footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile-Navigation
-    const navToggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector("nav");
-
-    navToggle.addEventListener("click", () => {
-      nav.classList.toggle("nav-open");
-    });
-  </script>
-</body>
-</html>
+    .nav-toggle span
